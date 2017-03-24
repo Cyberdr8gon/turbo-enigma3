@@ -29,6 +29,7 @@ class sdlPlatformData
     ~sdlPlatformData();
 
     bool loadMedia();
+    bool closeMedia();
     SDL_Surface* loadSurface(std::string path);
     SDL_Texture* loadTexture(std::string path);
 
