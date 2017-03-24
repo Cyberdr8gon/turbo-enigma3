@@ -1,6 +1,7 @@
 #pragma once
-#ifndef ITEM_H
-#define ITEM_H
+// TODO important
+// on the VC++ compiler ( this one ) and gcc and clang, pragma once does the same thing as header guards, better
+
 
 #include <iostream>
 
@@ -85,4 +86,3 @@ private:
 	int range;	// distance from object before damage inflicted
 };
 
-#endif

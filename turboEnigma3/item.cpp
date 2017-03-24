@@ -1,10 +1,18 @@
-#include "Item.h"
+// TODO IMPORTANT FOR EVERYONE
+// always put system library loads before your library loads to avoid link time errors!!
 #include <iostream>
 
-Item::Item(int wear, int weight)
+#include "Item.h"
+/*
+
+** IMPORTANT **
+why are we defining these here and in the header? it causes a compile error
+
+
+Item::Item(int _wear, int _weight)
 {
-	int wear = wear;
-	int weight = weight;
+	int wear = _wear;
+	int weight = _weight;
 };
 
 class Light_Armor : public Item {
@@ -21,3 +29,5 @@ class Long_sword : public Item {
 
 class Bow : public Item {
 };
+
+*/
