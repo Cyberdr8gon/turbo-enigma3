@@ -60,6 +60,14 @@ sdlPlatformData::~sdlPlatformData()
 {
   // SDL_DestroyTexture every allocated texture
   // also set pointer to null
+
+  for (SDL_Texture* el: textures)
+  {
+    SDL_DestroyTexture(el);
+    el = NULL;
+  }
+
+
   SDL_DestroyRenderer(renderer);
   renderer = NULL;
   
@@ -91,16 +99,49 @@ bool sdlPlatformData::handleMessages()
 }
 
 
+bool sdlPlatformData::textureLoadingHelper(std::string dir, std::string filename)
+{
+    SDL_Texture* texturePointer = NULL;
+    texturePointer = loadTexture(dir + filename);
+    
+    if(!texturePointer)
+    {
+        printf("Could not load: %s%s", dir.c_str(), filename.c_str());
+        return false;
+    } else
+    {
+        textures.push_back(texturePointer);
+        return true;
+    }
+    
+}
+
 bool sdlPlatformData::loadMedia()
 {
-    // TODO
-    return true;
+    std::string imageDir = "images/";
+    bool succeeded = true;
+    
+    // load all textures in array
+    for (std::string s: filesToLoad)
+    {
+        succeeded = textureLoadingHelper(imageDir, s) && succeeded;
+    }
+
+    if(succeeded)
+    {
+        printf("All assets loaded successfully!");
+    }
+    return succeeded;
 }
 
 
 void sdlPlatformData::render(gameData& state)
 {
-
+    // this is just test code!
+    SDL_RenderClear( renderer );
+    SDL_RenderCopy(renderer, textures[0], NULL, NULL);
+    SDL_RenderPresent(renderer);
+    
 }
 
 SDL_Surface* sdlPlatformData::loadSurface(std::string path)

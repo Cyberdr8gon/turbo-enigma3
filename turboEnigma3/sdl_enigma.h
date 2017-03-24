@@ -4,8 +4,9 @@
 #include <SDL_image.h>
 
 class gameData;
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
+const int TILE_SQUARE_SIDE_LENGTH = 16;
+const int SCREEN_WIDTH = TILE_SQUARE_SIDE_LENGTH * 32;
+const int SCREEN_HEIGHT = TILE_SQUARE_SIDE_LENGTH * 20;
 
 
 
@@ -32,6 +33,7 @@ class sdlPlatformData
     bool closeMedia();
     SDL_Surface* loadSurface(std::string path);
     SDL_Texture* loadTexture(std::string path);
+    bool textureLoadingHelper(std::string dir, std::string filename);
 
 
     bool handleMessages();
@@ -44,6 +46,11 @@ class sdlPlatformData
 
     std::vector<KeyPressSurfaces> recentEvents;
     
+    // write files to load here
+    std::vector<std::string> filesToLoad = 
+    {
+        "test1.bmp"
+    };
 
     bool error;
 };
