@@ -142,6 +142,9 @@
     <ClCompile Include="enigma.cpp" />
     <ClCompile Include="gameState.cpp" />
     <ClCompile Include="sdl_enigma.cpp" />
+    <ClCompile Include="enemy.cpp" />
+    <ClCompile Include="item.cpp" />
+    <ClCompile Include="slime.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -149,6 +152,9 @@
   <ItemGroup>
     <ClInclude Include="gameState.h" />
     <ClInclude Include="sdl_enigma.h" />
+    <ClInclude Include="enemy.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="slime.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
