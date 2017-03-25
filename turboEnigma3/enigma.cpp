@@ -9,6 +9,7 @@ int main(int argc, char* argv[])
   sdlPlatformData platformData;
   gameData gameState;
 
+
   // main game loop
   // check that the game is still asked to run and we haven't thrown platform layers
   while(isRunning && !platformData.error) {

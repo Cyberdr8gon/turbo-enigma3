@@ -2,11 +2,12 @@
 #include <vector>
 #include <SDL.h>
 #include <SDL_image.h>
+#include "texture.h"
 
 class gameData;
-const int TILE_SQUARE_SIDE_LENGTH = 16;
-const int SCREEN_WIDTH = TILE_SQUARE_SIDE_LENGTH * 32;
-const int SCREEN_HEIGHT = TILE_SQUARE_SIDE_LENGTH * 20;
+const int TILE_SQUARE_SIDE_LENGTH = 32;
+const int SCREEN_WIDTH = TILE_SQUARE_SIDE_LENGTH * 48;
+const int SCREEN_HEIGHT = TILE_SQUARE_SIDE_LENGTH * 30;
 
 
 
@@ -30,20 +31,25 @@ class sdlPlatformData
     ~sdlPlatformData();
 
     bool loadMedia();
-    bool closeMedia();
+    // load surface is not implemented
     SDL_Surface* loadSurface(std::string path);
-    SDL_Texture* loadTexture(std::string path);
+
+    SDL_Texture* loadTexture(std::string path,int* width, int* height);
     bool textureLoadingHelper(std::string dir, std::string filename);
 
 
     bool handleMessages();
+
     void render(gameData& state);
     
 
-    std::vector<SDL_Texture*> textures;
+    // rendering data
+    std::vector<texture*> textures;
     SDL_Renderer* renderer = NULL;
     SDL_Window* window = NULL;
 
+    // recent events, maybe optimize this away from vector later?
+    // KeyPressSurfaces has a limited number of options, we should remove vector
     std::vector<KeyPressSurfaces> recentEvents;
     
     // write files to load here

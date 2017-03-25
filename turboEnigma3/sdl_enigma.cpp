@@ -58,15 +58,10 @@ sdlPlatformData::sdlPlatformData()
 
 sdlPlatformData::~sdlPlatformData()
 {
-  // SDL_DestroyTexture every allocated texture
-  // also set pointer to null
-
-  for (SDL_Texture* el: textures)
-  {
-    SDL_DestroyTexture(el);
-    el = NULL;
-  }
-
+    for (texture* el: textures)
+    {
+        delete el;
+    }
 
   SDL_DestroyRenderer(renderer);
   renderer = NULL;
@@ -102,15 +97,18 @@ bool sdlPlatformData::handleMessages()
 bool sdlPlatformData::textureLoadingHelper(std::string dir, std::string filename)
 {
     SDL_Texture* texturePointer = NULL;
-    texturePointer = loadTexture(dir + filename);
-    
+    int width = 0;
+    int height= 0;
+
+    texturePointer = loadTexture(dir + filename, &width, &height);
+
     if(!texturePointer)
     {
         printf("Could not load: %s%s", dir.c_str(), filename.c_str());
         return false;
     } else
     {
-        textures.push_back(texturePointer);
+        textures.push_back(new texture(texturePointer,width,height));
         return true;
     }
     
@@ -135,12 +133,27 @@ bool sdlPlatformData::loadMedia()
 }
 
 
+
+
 void sdlPlatformData::render(gameData& state)
 {
     // this is just test code!
-    SDL_RenderClear( renderer );
-    SDL_RenderCopy(renderer, textures[0], NULL, NULL);
+    // clean off screen
+    SDL_SetRenderDrawColor( renderer, 0xFF, 0xFF, 0xFF, 0xFF );
+	SDL_RenderClear( renderer );
+
+    //printf("%s\n", SDL_GetError());
+    // each texture render copy looks like this
+    // 3rd arg is important, it is the rect for the location of the sprite
+
+    // parse game state and render stuff here
+
+    textures[0]->render(50, 50, renderer);
+
+    // everything to render is above this line
+    // actually renderering the scene is here
     SDL_RenderPresent(renderer);
+
     
 }
 
@@ -178,7 +191,7 @@ SDL_Surface* sdlPlatformData::loadSurface(std::string path)
     return NULL;
 }
 
-SDL_Texture* sdlPlatformData::loadTexture(std::string path)
+SDL_Texture* sdlPlatformData::loadTexture(std::string path, int* width, int* height)
 {
     //The final texture
     SDL_Texture* newTexture = NULL;
@@ -191,12 +204,21 @@ SDL_Texture* sdlPlatformData::loadTexture(std::string path)
     }
     else
     {
+        //Color key image
+        SDL_SetColorKey( loadedSurface, SDL_TRUE, SDL_MapRGB( loadedSurface->format, 0, 0xFF, 0xFF ) );
         //Create texture from surface pixels
         newTexture = SDL_CreateTextureFromSurface( renderer, loadedSurface );
         if( newTexture == NULL )
         {
             printf( "Unable to create texture from %s! SDL Error: %s\n", path.c_str(), SDL_GetError() );
+            return NULL;
         }
+        else 
+        {
+            *width = loadedSurface->w;
+            *height = loadedSurface->h;
+        }
+
 
         //Get rid of old loaded surface
         SDL_FreeSurface( loadedSurface );
