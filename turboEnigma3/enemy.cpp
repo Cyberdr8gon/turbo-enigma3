@@ -40,8 +40,8 @@ int enemy::getHealth()
 
 int enemy::damage(int level)
 {
-	int attackDamage = 
-	return 
+	int attackDamage = 10;
+	return attackDamage;
 }
 
 string enemy::getName()
