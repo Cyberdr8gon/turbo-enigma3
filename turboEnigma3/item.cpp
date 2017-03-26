@@ -14,7 +14,6 @@ int Item::itemWear() {
 	return wear;
 }
 */
-Item::Item() {};
 
 int Armor::getProtection() {
 	return protection;
