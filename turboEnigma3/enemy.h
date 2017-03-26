@@ -1,7 +1,3 @@
-#ifndef ENEMY_H
-#define ENEMY_H
-#endif
-
 #pragma once
 
 #include <iostream>
@@ -22,9 +18,11 @@ public:
 
 	~enemy();
 
+	int adjustHealth(int damage);
 	int getHealth();
-	void damage(int amount);
+	int damage(int level);
 	string getName();
 	void setName(string n);
+	bool isAlive(int a);
 };
 
