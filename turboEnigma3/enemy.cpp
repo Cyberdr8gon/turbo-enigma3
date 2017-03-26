@@ -20,7 +20,7 @@ enemy::~enemy()
 }
 
 
-void enemy::adjustHealth(int damage)
+void enemy::adjustHealth()
 {
 	int hdmg = hero::damage();
 	int health = this-> health;

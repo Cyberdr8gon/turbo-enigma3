@@ -1,3 +1,10 @@
-﻿  slime.cpp
-  turboEnigma3.vcxproj -> C:\Users\Sheena\Dropbox\SoftDev\teamProj\turbo-enigma3\x64\Debug\turboEnigma3.exe
-  turboEnigma3.vcxproj -> C:\Users\Sheena\Dropbox\SoftDev\teamProj\turbo-enigma3\x64\Debug\turboEnigma3.pdb (Partial PDB)
+﻿  texture.cpp
+  slime.cpp
+  item.cpp
+  enemy.cpp
+c:\users\sheena\dropbox\softdev\teamproj\turbo-enigma3\turboenigma3\enemy.cpp(2): fatal error C1083: Cannot open include file: 'hero.h': No such file or directory
+  sdl_enigma.cpp
+c:\users\sheena\dropbox\softdev\teamproj\turbo-enigma3\turboenigma3\sdl_enigma.cpp : fatal error C1041: cannot open program database 'C:\Users\Sheena\Dropbox\SoftDev\teamProj\turbo-enigma3\turboEnigma3\x64\Debug\vc141.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+  gameState.cpp
+  enigma.cpp
+  Generating Code...

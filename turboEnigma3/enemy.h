@@ -18,7 +18,7 @@ public:
 
 	~enemy();
 
-	int adjustHealth(int damage);
+	int adjustHealth();
 	int getHealth();
 	int damage(int level);
 	string getName();
