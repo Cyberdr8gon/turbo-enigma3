@@ -3,31 +3,20 @@
 #include <iostream>
 
 #include "Item.h"
-/*
 
-** IMPORTANT **
-why are we defining these here and in the header? it causes a compile error
-
-
-Item::Item(int _wear, int _weight)
+/* TODO IF TIME PERMITS
+int Item::itemWeight()
 {
-	int wear = _wear;
-	int weight = _weight;
-};
+	return weight;
+}
 
-class Light_Armor : public Item {
-};
-
-class Heavy_Armor : public Item {
-};
-
-class Short_sword : public Item {
-};
-
-class Long_sword : public Item {
-};
-
-class Bow : public Item {
-};
-
+int Item::itemWear() {
+	return wear;
+}
 */
+int Armor::getProtection() {
+	return protection;
+}
+int Weapon::getDamage() {
+	return wDamage;
+}
