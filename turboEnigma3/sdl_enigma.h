@@ -3,23 +3,8 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include "texture.h"
+#include "gameState.h"
 
-class gameData;
-const int TILE_SQUARE_SIDE_LENGTH = 32;
-const int SCREEN_WIDTH = TILE_SQUARE_SIDE_LENGTH * 48;
-const int SCREEN_HEIGHT = TILE_SQUARE_SIDE_LENGTH * 30;
-
-
-
-enum KeyPressSurfaces
-{
-    KEY_PRESS_SURFACE_DEFAULT,
-    KEY_PRESS_SURFACE_UP,
-    KEY_PRESS_SURFACE_DOWN,
-    KEY_PRESS_SURFACE_LEFT,
-    KEY_PRESS_SURFACE_RIGHT,
-    KEY_PRESS_SURFACE_TOTAL
-};
 
 
 // api for sdlPlatform

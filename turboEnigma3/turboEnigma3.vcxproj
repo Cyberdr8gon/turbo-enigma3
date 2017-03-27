@@ -141,6 +141,8 @@
   <ItemGroup>
     <ClCompile Include="enigma.cpp" />
     <ClCompile Include="gameState.cpp" />
+    <ClCompile Include="map.cpp" />
+    <ClCompile Include="mapGenerator.cpp" />
     <ClCompile Include="sdl_enigma.cpp" />
     <ClCompile Include="enemy.cpp" />
     <ClCompile Include="item.cpp" />
@@ -152,6 +154,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gameState.h" />
+    <ClInclude Include="map.h" />
+    <ClInclude Include="mapGenerator.h" />
+    <ClInclude Include="mapSystem.h" />
+    <ClInclude Include="enigma_constants.h" />
     <ClInclude Include="sdl_enigma.h" />
     <ClInclude Include="enemy.h" />
     <ClInclude Include="Item.h" />

@@ -1,5 +1,5 @@
-#include "sdl_enigma.h"
 #include "gameState.h"
+#include "sdl_enigma.h"
 
 // main entrance to game
 int main(int argc, char* argv[])

@@ -22,6 +22,18 @@
     <Filter Include="Source Files\Platform Files">
       <UniqueIdentifier>{e4d5710f-55ee-4d43-aec2-a0e4f24d5e96}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Platform Headers">
+      <UniqueIdentifier>{b3d3309f-f8ac-4c87-b717-8111a7847ab4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Map Headers">
+      <UniqueIdentifier>{3f3c7626-e940-410b-857c-532bf6bde058}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entity Headers">
+      <UniqueIdentifier>{3862949e-b6f9-4cae-b155-28ccaf4461a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Map Files">
+      <UniqueIdentifier>{b836de6b-1cae-4a04-b1d1-b7dfd107a23a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="enigma.cpp">
@@ -36,37 +48,55 @@
     <ClCompile Include="enemy.cpp">
       <Filter>Source Files\Enemy Files</Filter>
     </ClCompile>
-    <ClCompile Include="slime.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="sdl_enigma.cpp">
       <Filter>Source Files\Platform Files</Filter>
     </ClCompile>
     <ClCompile Include="texture.cpp">
       <Filter>Source Files\Platform Files</Filter>
     </ClCompile>
+    <ClCompile Include="slime.cpp">
+      <Filter>Source Files\Enemy Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mapGenerator.cpp">
+      <Filter>Source Files\Map Files</Filter>
+    </ClCompile>
+    <ClCompile Include="map.cpp">
+      <Filter>Source Files\Map Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sdl_enigma.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="gameState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Item.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="enemy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="slime.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="sdl_enigma.h">
+      <Filter>Header Files\Platform Headers</Filter>
     </ClInclude>
     <ClInclude Include="texture.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Platform Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="mapGenerator.h">
+      <Filter>Header Files\Map Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="mapSystem.h">
+      <Filter>Header Files\Map Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="map.h">
+      <Filter>Header Files\Map Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy.h">
+      <Filter>Header Files\Entity Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Header Files\Entity Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="slime.h">
+      <Filter>Header Files\Entity Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="enigma_constants.h">
+      <Filter>Header Files\Platform Headers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
