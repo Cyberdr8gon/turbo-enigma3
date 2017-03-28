@@ -57,9 +57,6 @@
     <ClCompile Include="slime.cpp">
       <Filter>Source Files\Enemy Files</Filter>
     </ClCompile>
-    <ClCompile Include="mapGenerator.cpp">
-      <Filter>Source Files\Map Files</Filter>
-    </ClCompile>
     <ClCompile Include="map.cpp">
       <Filter>Source Files\Map Files</Filter>
     </ClCompile>
@@ -77,9 +74,6 @@
     <ClInclude Include="texture.h">
       <Filter>Header Files\Platform Headers</Filter>
     </ClInclude>
-    <ClInclude Include="mapGenerator.h">
-      <Filter>Header Files\Map Headers</Filter>
-    </ClInclude>
     <ClInclude Include="mapSystem.h">
       <Filter>Header Files\Map Headers</Filter>
     </ClInclude>
@@ -96,7 +90,7 @@
       <Filter>Header Files\Entity Headers</Filter>
     </ClInclude>
     <ClInclude Include="enigma_constants.h">
-      <Filter>Header Files\Platform Headers</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

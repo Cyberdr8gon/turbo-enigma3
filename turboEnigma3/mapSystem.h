@@ -1,6 +1,5 @@
 #pragma once
 #include "map.h"
-#include "mapGenerator.h"
 
 
 class mapSystem
@@ -18,6 +17,5 @@ class mapSystem
     int currentFloor;
     int totalFloors;
     map* loadedLevels[5];
-    mapGenerator generator;
 
 };

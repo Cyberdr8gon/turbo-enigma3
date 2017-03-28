@@ -10,8 +10,18 @@ int main(int argc, char* argv[])
   gameData gameState;
 
 
+
+  // begin debug area
+
+  map testMap(300, 200);
+  testMap.generate(1000);
+  testMap.printDebugMap();
+
+  // end debug area
+
   // main game loop
-  // check that the game is still asked to run and we haven't thrown platform layers
+  // check that the game is still asked to run and we haven't thrown any errors
+  // in platform layers
   while(isRunning && !platformData.error) {
     isRunning = platformData.handleMessages();
 
