@@ -2,6 +2,7 @@
 #include <vector>
 #include "enemy.h"
 #include "Item.h"
+#include "entity_table.h"
 
 
 enum Tile
@@ -69,7 +70,7 @@ class map
 
   private:
     // possibly make a short for more/easier masking options
-    vector<enemy*> enemyList;
+    entity_table enemyTable;
     vector<Item*> itemList;
     
     int _width;

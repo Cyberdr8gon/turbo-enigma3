@@ -15,6 +15,8 @@ class enemy
 protected:
 	int health;
 	string name;
+  int _xCord;
+  int _yCord;
 
 public:
 	enemy();
@@ -26,5 +28,8 @@ public:
 	void damage(int amount);
 	string getName();
 	void setName(string n);
+
+  int yCord();
+  int xCord();
 };
 

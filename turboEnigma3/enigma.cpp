@@ -13,10 +13,6 @@ int main(int argc, char* argv[])
 
   // begin debug area
 
-  map testMap(300, 200);
-  testMap.generate(1000);
-  testMap.printDebugMap();
-
   // end debug area
 
   // main game loop

@@ -34,6 +34,9 @@
     <Filter Include="Source Files\Map Files">
       <UniqueIdentifier>{b836de6b-1cae-4a04-b1d1-b7dfd107a23a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Utility Headers">
+      <UniqueIdentifier>{2504923a-d62d-422b-8b49-78265f00c4ba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="enigma.cpp">
@@ -59,6 +62,9 @@
     </ClCompile>
     <ClCompile Include="map.cpp">
       <Filter>Source Files\Map Files</Filter>
+    </ClCompile>
+    <ClCompile Include="entity_table.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -90,7 +96,10 @@
       <Filter>Header Files\Entity Headers</Filter>
     </ClInclude>
     <ClInclude Include="enigma_constants.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Utility Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="entity_table.h">
+      <Filter>Header Files\Utility Headers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
