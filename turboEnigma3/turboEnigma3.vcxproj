@@ -139,10 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="camera.cpp" />
     <ClCompile Include="enigma.cpp" />
     <ClCompile Include="gameState.cpp" />
     <ClCompile Include="entity_table.cpp" />
+    <ClCompile Include="Hero.cpp" />
     <ClCompile Include="map.cpp" />
+    <ClCompile Include="mapSystem.cpp" />
     <ClCompile Include="sdl_enigma.cpp" />
     <ClCompile Include="enemy.cpp" />
     <ClCompile Include="item.cpp" />
@@ -153,8 +156,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="camera.h" />
     <ClInclude Include="gameState.h" />
     <ClInclude Include="entity_table.h" />
+    <ClInclude Include="Hero.h" />
     <ClInclude Include="map.h" />
     <ClInclude Include="mapSystem.h" />
     <ClInclude Include="enigma_constants.h" />

@@ -5,6 +5,7 @@
 #include "map.h"
 #include "mapSystem.h"
 #include "enigma_constants.h"
+#include "Hero.h"
 
 class gameData
 {
@@ -13,8 +14,9 @@ class gameData
     bool update(std::vector<KeyPressSurfaces> &events);
 
 
-
+    gameData();
     
+    hero* heroEntity;
 
     mapSystem* map_system;
 };

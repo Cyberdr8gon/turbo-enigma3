@@ -44,13 +44,14 @@ class map
 
     map(int width, int height);
 
-    void generate(int maxFeatures);
+    void generate(int maxFeatures, int difficulty);
 
     void printDebugMap();
 
-  private: 
     Tile getTile(int x, int y) const;
+
     void setTile(int x, int y, Tile tileType);
+  private: 
 
     std::string getTileString(int x, int y);
 
@@ -66,12 +67,13 @@ class map
 
     bool placeObject(Tile tile);
 
+    void populate(int difficulty);
 
 
   private:
     // possibly make a short for more/easier masking options
-    entity_table enemyTable;
-    vector<Item*> itemList;
+    entity_table _enemyTable;
+    vector<Item*> _itemList;
     
     int _width;
     int _height;

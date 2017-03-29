@@ -66,6 +66,15 @@
     <ClCompile Include="entity_table.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hero.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mapSystem.cpp">
+      <Filter>Source Files\Map Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -100,6 +109,12 @@
     </ClInclude>
     <ClInclude Include="entity_table.h">
       <Filter>Header Files\Utility Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Hero.h">
+      <Filter>Header Files\Entity Headers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

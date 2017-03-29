@@ -6,8 +6,8 @@ int main(int argc, char* argv[])
 {
   // setup SDL
   bool isRunning = true;
-  sdlPlatformData platformData;
-  gameData gameState;
+  gameData gameState{};
+  sdlPlatformData platformData(gameState);
 
 
 
@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
 
     gameState.update(platformData.recentEvents);
  
-    platformData.render(gameState);
+    platformData.render();
     
   }
     

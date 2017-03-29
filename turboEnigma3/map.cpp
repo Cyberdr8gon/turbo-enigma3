@@ -33,9 +33,10 @@ map::map(int width, int height)
         , _tiles(width * height, Unused)
         , _rooms()
         , _exits()
+        , _enemyTable(100)
 { }
 
-void map::generate(int maxFeatures)
+void map::generate(int maxFeatures, int difficutly)
 {
   // place the first room in the center
 	if (!makeRoom(_width / 2, _height / 2, static_cast<Direction>(randomInt(4), true)))
@@ -67,6 +68,7 @@ void map::generate(int maxFeatures)
 	} 
 
   // populate map here
+  populate(difficutly);
 
 }
 
@@ -377,3 +379,11 @@ std::string map::getTileString(int x, int y)
     return " ";
   }
 }
+
+//TODO 
+
+void map::populate(int difficulty)
+{
+  return;
+}
+

@@ -35,3 +35,13 @@ void enemy::setName(string n)
 {
 	this->name = n;
 }
+
+int enemy::xCord()
+{
+  return _xCord;
+}
+
+int enemy::yCord()
+{
+  return _yCord;
+}
