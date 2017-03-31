@@ -51,6 +51,11 @@ class map
     Tile getTile(int x, int y) const;
 
     void setTile(int x, int y, Tile tileType);
+
+    int getDownStairX();
+    int getDownStairY();
+    int getUpStairX();
+    int getUpStairY();
   private: 
 
     std::string getTileString(int x, int y);
@@ -67,6 +72,9 @@ class map
 
     bool placeObject(Tile tile);
 
+    bool placeUpStairs();
+    bool placeDownStairs();
+
     void populate(int difficulty);
 
 
@@ -77,6 +85,13 @@ class map
     
     int _width;
     int _height;
+
+    int _upStairsX;
+    int _upStairsY;
+
+    int _downStairsX;
+    int _downStairsY;
+
     std::vector<Tile> _tiles;
     std::vector<Rect> _rooms;
     std::vector<Rect> _exits;

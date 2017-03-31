@@ -90,6 +90,23 @@ bool sdlPlatformData::handleMessages()
         } else if (e.type == SDL_KEYDOWN)
         {
             // handle key inputs
+          switch (e.key.keysym.sym)
+          {
+          case SDLK_UP:
+            recentEvents.push_back(KEY_PRESS_SURFACE_UP);
+            break;
+          case SDLK_DOWN:
+            recentEvents.push_back(KEY_PRESS_SURFACE_DOWN);
+            break;
+          case SDLK_RIGHT:
+            recentEvents.push_back(KEY_PRESS_SURFACE_RIGHT);
+            break;
+          case SDLK_LEFT:
+            recentEvents.push_back(KEY_PRESS_SURFACE_LEFT);
+            break;
+          default:
+            break;
+          }
         }
     }
 
@@ -130,7 +147,7 @@ bool sdlPlatformData::loadMedia()
 
     if(succeeded)
     {
-        printf("All assets loaded successfully!");
+        printf("All assets loaded successfully!\n");
     }
     return succeeded;
 }

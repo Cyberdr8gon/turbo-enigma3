@@ -5,9 +5,16 @@ class hero
 {
 
 public:
+
+  void spawn(int xCord, int yCord);
   int xCord();
   int yCord();
 
-  int _xCord = X_MAX_MAP_SIZE / 2;
-  int _yCord = Y_MAX_MAP_SIZE / 2;
+  void moveUp();
+  void moveDown();
+  void moveLeft();
+  void moveRight();
+
+  int _xCord = 0;
+  int _yCord = 0;
 };

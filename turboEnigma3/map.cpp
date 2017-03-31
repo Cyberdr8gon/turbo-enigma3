@@ -55,13 +55,13 @@ void map::generate(int maxFeatures, int difficutly)
 		}
 	}
 
-	if (!placeObject(UpStairs))
+	if (!placeUpStairs())
 	{
 		std::cout << "Unable to place up stairs.\n";
 		return;
 	}
 
-	if (!placeObject(DownStairs))
+	if (!placeDownStairs())
 	{
 		std::cout << "Unable to place down stairs.\n";
 		return;
@@ -355,6 +355,60 @@ bool map::placeObject(Tile tile)
   return false;
 }
 
+bool map::placeUpStairs()
+{
+  if(_rooms.empty())
+  {
+    return false;
+  }
+  
+  int r = randomInt(_rooms.size());
+  int x = randomInt(_rooms[r].x + 1, _rooms[r].x + _rooms[r].width - 2);
+  int y = randomInt(_rooms[r].y + 1, _rooms[r].y + _rooms[r].height - 2);
+
+  if(getTile(x,y) == Floor)
+  {
+    setTile(x, y, UpStairs);
+
+    _rooms.erase(_rooms.begin() + r);
+    
+    _upStairsX = x;
+    _upStairsY = y;
+
+    return true;
+  }
+  return false;
+
+}
+
+bool map::placeDownStairs()
+{
+  if(_rooms.empty())
+  {
+    return false;
+  }
+  
+  int r = randomInt(_rooms.size());
+  int x = randomInt(_rooms[r].x + 1, _rooms[r].x + _rooms[r].width - 2);
+  int y = randomInt(_rooms[r].y + 1, _rooms[r].y + _rooms[r].height - 2);
+
+  if(getTile(x,y) == Floor)
+  {
+    setTile(x, y, DownStairs);
+
+    _rooms.erase(_rooms.begin() + r);
+
+    _downStairsX = x;
+    _downStairsY = y;
+    
+    return true;
+  }
+  return false;
+
+}
+
+
+
 std::string map::getTileString(int x, int y)
 {
   switch (getTile(x,y))
@@ -387,3 +441,22 @@ void map::populate(int difficulty)
   return;
 }
 
+int map::getDownStairX()
+{
+  return _downStairsX;
+}
+
+int map::getDownStairY()
+{
+  return _downStairsY;
+}
+
+int map::getUpStairX()
+{
+  return _upStairsX;
+}
+
+int map::getUpStairY()
+{
+  return _upStairsY;
+}

@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="camera.cpp" />
+    <ClCompile Include="collision.cpp" />
     <ClCompile Include="enigma.cpp" />
     <ClCompile Include="gameState.cpp" />
     <ClCompile Include="entity_table.cpp" />
@@ -157,6 +158,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="camera.h" />
+    <ClInclude Include="collision.h" />
     <ClInclude Include="gameState.h" />
     <ClInclude Include="entity_table.h" />
     <ClInclude Include="Hero.h" />

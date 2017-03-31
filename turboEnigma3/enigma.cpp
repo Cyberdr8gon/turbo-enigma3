@@ -8,11 +8,12 @@ int main(int argc, char* argv[])
   bool isRunning = true;
   gameData gameState{};
   sdlPlatformData platformData(gameState);
-
+  gameState.heroEntity->spawn( gameState.map_system->loadedLevels[2]->getDownStairX()
+                             , gameState.map_system->loadedLevels[2]->getDownStairY());
 
 
   // begin debug area
-
+  // gameState.map_system->loadedLevels[2]->printDebugMap();
   // end debug area
 
   // main game loop

@@ -36,15 +36,16 @@ void camera::renderScene(SDL_Renderer* renderer)
 
 void camera::envRenderPass(SDL_Renderer* renderer)
 {
-  int x_offset = 0;
-  int y_offset = 0;
 
-  for(int y = yRenderOrigin; y < yRenderOrigin + CAMERA_RENDER_TILE_HEIGHT; y++)
+  int x_offset = 0;
+  int y_offset = CAMERA_RENDER_TILE_HEIGHT * TILE_SQUARE_SIDE_LENGTH - TILE_SQUARE_SIDE_LENGTH;
+
+  for(int x = xRenderOrigin; x < xRenderOrigin + CAMERA_RENDER_TILE_WIDTH; x++)
   {
-    x_offset = 0;
-    for(int x = xRenderOrigin; x < xRenderOrigin + CAMERA_RENDER_TILE_WIDTH; x++)
+    y_offset = CAMERA_RENDER_TILE_HEIGHT * TILE_SQUARE_SIDE_LENGTH - TILE_SQUARE_SIDE_LENGTH;
+    for(int y = yRenderOrigin + CAMERA_RENDER_TILE_HEIGHT; y >= yRenderOrigin; y--)
     {
-      switch(_gameState.map_system->loadedLevels[3]->getTile(x,y))
+      switch(_gameState.map_system->loadedLevels[2]->getTile(x -1 ,y - 2))
       {
       case Floor:
       case Corridor:
@@ -70,9 +71,9 @@ void camera::envRenderPass(SDL_Renderer* renderer)
         _textureArrayRef[1]->render(x_offset, y_offset, renderer);
         break;
       }
-      x_offset += TILE_SQUARE_SIDE_LENGTH;
+      y_offset -= TILE_SQUARE_SIDE_LENGTH;
     }
-    y_offset += TILE_SQUARE_SIDE_LENGTH;
+    x_offset += TILE_SQUARE_SIDE_LENGTH;
   }
 }
 
@@ -80,6 +81,8 @@ void camera::envRenderPass(SDL_Renderer* renderer)
 void camera::heroRenderPass(SDL_Renderer* renderer)
 {
   //TODO
+  _textureArrayRef[0]->render(CAMERA_RENDER_TILE_WIDTH * TILE_SQUARE_SIDE_LENGTH / 2, CAMERA_RENDER_TILE_HEIGHT * TILE_SQUARE_SIDE_LENGTH / 2, renderer);
+
 }
 
 void camera::entityRenderPass(SDL_Renderer* renderer)
