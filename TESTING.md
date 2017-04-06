@@ -1,77 +1,96 @@
-WHO: Sam Bateman, Kylee Bennett, Tanay Choudhary, Sheena Hann
+# WHO: Sam Bateman, Kylee Bennett, Tanay Choudhary, Sheena Hann
 
-TITLE: TurboEnigma3
+# TITLE: TurboEnigma3
 
-VISION: Create a fun, simple dungeon crawler
+# VISION: Create a fun, simple dungeon crawler
 
-AUTOMATED TESTS:
+# AUTOMATED TESTS:
+
+![[test proof image]](testProof.png)
 
 
 
-
-
-USER ACCEPTANCE TESTS
+# USER ACCEPTANCE TESTS
 
 ================================================================
-Use case name
+## Move hero through dungeon and navigate with arrow keys
 
-Description
+## Description
+Navigate a randomly generated dungeon with a hero controlled by arrow keys, moving through doors, rooms and hallways. 
 
-Pre-conditions
+## Pre-conditions
+Must have platform layer completed. Required randomly generated maps and a entity system.
 
-Test-steps
+## Test-steps
+spawn your hero and find the upstairs.
 
-Expected result
+## Expected result
+Find stairs through elaborate maze 
 
-Actual result
+## Actual result
+Found stairs through elaborate maze
 
-Status (Pass/Fail)
+## Status (Pass/Fail)
+Pass
 
-Notes
+## Notes
 
-Post-conditions
+## Post-conditions
+Expand entity system to hold enemies and items
 
 =================================================================
 
 ================================================================
-Use case name
+## Pick up item
 
-Description
+## Description
+find a randomly placed item and pick up and use by hero against other entities
 
-Pre-conditions
+## Pre-conditions
+other entities have been implemented, items have been implemented, populating the map has been implimented
 
-Test-steps
+## Test-steps
+find randomly placed item (can cheat sheet in debug mode for x/y coords)
 
-Expected result
+## Expected result
+Find randomly placed item
 
-Actual result
+## Actual result
+No items spawned
 
-Status (Pass/Fail)
+## Status (Pass/Fail)
+Fail
 
-Notes
+## Notes
 
-Post-conditions
+## Post-conditions
 
 =================================================================
 
 ================================================================
-Use case name
+## Fight and kill enemy
 
-Description
+## Description
+Find and kill enemy
 
-Pre-conditions
+## Pre-conditions
+implemented populate map, implimented skill system, implemented entity system
 
-Test-steps
+## Test-steps
+Find enemy and fight/kill him
 
-Expected result
+## Expected result
+enemy is cleaned up and drops items on death
 
-Actual result
+## Actual result
+no enemies on map
 
-Status (Pass/Fail)
+## Status (Pass/Fail)
+Fail
 
-Notes
+## Notes
 
-Post-conditions
+## Post-conditions
 
 =================================================================
 
