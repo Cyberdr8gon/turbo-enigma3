@@ -1,7 +1,3 @@
-#ifndef SLIME_H
-#define SLIME_H
-#endif // !SLIME_H
-
 #pragma once
 
 #include "enemy.h"
