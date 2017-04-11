@@ -4,33 +4,61 @@
 #include <iostream>
 
 enum itemTypes {
-    Armor,
+  Armor,
 	Weapon,
 	Empty,
 	Num_of_Item_Type
 };
 
+enum itemEquipState
+{
+  EnemyEquipped,
+  PlayerEquipped,
+  Unequipped,
+  numOfEquipStates
+};
+
 class Item {
 public:
 	explicit
-		Item();
-	itemTypes type;
-	// virtual int itemWear(); TODO if time permits
+	Item(int UniqueId,itemTypes type, int wear, std::string name);
+	itemTypes _type;
+	int itemWear() const; 
+
+  // getter and setter for equip state
+  void updateEquipState(itemEquipState isEquipped);
+  itemEquipState isItemEquiped() const;
+
+  // getter for item name
+  std::string getName() const;
+
+  int getUniqueId() const;
+  void setUniqueId(int ID);
+
 	// virtual int itemWeight(); TODO if time permits
 	// virtual void adjustItemWear(Item equipment);
 private:
-	// int wear;	// wear is damage to item that occurs with use (health of item)
+  int _uniqueID;
+	int _wear;	// wear is damage to item that occurs with use (health of item)
+  std::string _itemName;
+  itemEquipState _equipState;
 	// int weight;	// impose limit to inventory?
 };
+
 class Armor : public Item {
 public:
-	int protection = 10;
-	int getProtection();
+
+  Armor(int UniqueId, int wear, int protection, std::string name);
+
+	int _protection;
+	int getProtection() const;
 
 };
+
 class Weapon : public Item {
 public: 
-	int wDamage = 25;
-	int getDamage();
+  Weapon(int UniqueId, int wear, int damage, std::string name);
+	int _wDamage;
+	int getDamage() const;
 };
 

@@ -81,6 +81,9 @@
     <ClInclude Include="..\turboEnigma3\collision.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="item_table.h">
+      <Filter>Header Files\Utility Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\turboEnigma3\sdl_enigma.cpp">
@@ -118,6 +121,9 @@
     </ClCompile>
     <ClCompile Include="..\turboEnigma3\mapSystem.cpp">
       <Filter>Source Files\Map Files</Filter>
+    </ClCompile>
+    <ClCompile Include="item_table.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
