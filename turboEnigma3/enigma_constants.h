@@ -28,3 +28,5 @@ enum KeyPressSurfaces
     KEY_PRESS_SURFACE_TOTAL
 };
 
+
+const int MAX_ENEMY_DIFFICULTY = 10;

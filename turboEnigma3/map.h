@@ -3,6 +3,7 @@
 #include "enemy.h"
 #include "Item.h"
 #include "entity_table.h"
+#include "../gameCodeLib/item_table.h"
 
 
 enum Tile
@@ -79,9 +80,8 @@ class map
 
 
   private:
-    // possibly make a short for more/easier masking options
     entity_table _enemyTable;
-    vector<Item*> _itemList;
+    item_table _itemList;
     
     int _width;
     int _height;

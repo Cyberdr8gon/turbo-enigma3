@@ -1,17 +1,12 @@
 #include "enemy.h"
 #include "hero.h"
 
-enemy::enemy()
-{
-	health = 100;
-}
 
-enemy::enemy(string n)
+enemy::enemy(std::string name, int hardness, int hp, int attack, int specialClassifier, int spriteIndex)
+  :health(hp), attack(attack), name(name), specialClassifier(specialClassifier), spriteIndex(spriteIndex)
 {
-	health = 100;
-	name = n;
+  
 }
-
 
 
 
@@ -45,12 +40,12 @@ int enemy::damage(int level)
 	return attackDamage;
 }
 
-string enemy::getName()
+std::string enemy::getName()
 {
 	return name;
 }
 
-void enemy::setName(string n)
+void enemy::setName(std::string n)
 {
 	name = n;
 }

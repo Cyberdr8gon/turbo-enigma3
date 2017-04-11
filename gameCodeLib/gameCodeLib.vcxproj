@@ -144,6 +144,7 @@
     <ClInclude Include="..\turboEnigma3\sdl_enigma.h" />
     <ClInclude Include="..\turboEnigma3\slime.h" />
     <ClInclude Include="..\turboEnigma3\texture.h" />
+    <ClInclude Include="enemy_library.h" />
     <ClInclude Include="item_table.h" />
   </ItemGroup>
   <ItemGroup>
@@ -159,6 +160,7 @@
     <ClCompile Include="..\turboEnigma3\sdl_enigma.cpp" />
     <ClCompile Include="..\turboEnigma3\slime.cpp" />
     <ClCompile Include="..\turboEnigma3\texture.cpp" />
+    <ClCompile Include="enemy_library.cpp" />
     <ClCompile Include="item_table.cpp" />
   </ItemGroup>
   <ItemGroup>

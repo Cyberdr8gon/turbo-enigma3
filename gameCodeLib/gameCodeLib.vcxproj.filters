@@ -84,6 +84,9 @@
     <ClInclude Include="item_table.h">
       <Filter>Header Files\Utility Headers</Filter>
     </ClInclude>
+    <ClInclude Include="enemy_library.h">
+      <Filter>Header Files\Map Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\turboEnigma3\sdl_enigma.cpp">
@@ -124,6 +127,9 @@
     </ClCompile>
     <ClCompile Include="item_table.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy_library.cpp">
+      <Filter>Source Files\Enemy Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
