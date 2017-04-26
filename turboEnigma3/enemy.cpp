@@ -1,37 +1,75 @@
 #include "enemy.h"
+#include "hero.h"
 
 enemy::enemy()
 {
-	this->health = 100;
+	health = 100;
 }
 
 enemy::enemy(string n)
 {
-	this->health = 100;
-	this->name = n;
+	health = 100;
+	name = n;
 }
+
+
 
 
 enemy::~enemy()
 {
 }
 
+/*
+void enemy::adjustHealth()
+{
+	int hdmg = hero::damage();
+	int health = this-> health;
+	int newHealth = health - hdmg;
+	if ((newHealth - health) > 0)
+	{
+		this->health -= hdmg;
+	}
+	else
+		isAlive(0);
+}
+*/
+
 int enemy::getHealth()
 {
-	return this->health;
+	return health;
 }
 
-void enemy::damage(int amount)
+int enemy::damage(int level)
 {
-	this->health -= amount;
+	int attackDamage = 10;
+	return attackDamage;
 }
 
 string enemy::getName()
 {
-	return this ->name;
+	return name;
 }
 
 void enemy::setName(string n)
 {
-	this->name = n;
+	name = n;
 }
+
+int enemy::xCord()
+{
+  return _xCord;
+}
+
+int enemy::yCord()
+{
+  return _yCord;
+}
+bool isAlive(int a)
+{
+	if (a == 1)
+		return 1;
+	else
+		return 0;
+}
+
+

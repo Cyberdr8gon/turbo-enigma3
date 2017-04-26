@@ -1,7 +1,3 @@
-#ifndef ENEMY_H
-#define ENEMY_H
-#endif
-
 #pragma once
 
 #include <iostream>
@@ -15,6 +11,8 @@ class enemy
 protected:
 	int health;
 	string name;
+  int _xCord;
+  int _yCord;
 
 public:
 	enemy();
@@ -22,9 +20,17 @@ public:
 
 	~enemy();
 
+	int adjustHealth();
 	int getHealth();
-	void damage(int amount);
+	int damage(int level);
 	string getName();
 	void setName(string n);
+
+	bool isAlive(int a);
+
+
+  int yCord();
+  int xCord();
+
 };
 

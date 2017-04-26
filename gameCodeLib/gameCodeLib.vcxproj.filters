@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Entity Headers">
+      <UniqueIdentifier>{ee678f6f-787d-4152-b2b7-ad8d1a1c5464}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Map Headers">
+      <UniqueIdentifier>{cb584762-b120-41ff-9561-5f226324d66c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Platform Headers">
+      <UniqueIdentifier>{66eb582c-0ede-47f5-ba68-37bb140725de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utility Headers">
+      <UniqueIdentifier>{751ef5bb-714b-4654-8193-1c587930ded4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Platform Files">
+      <UniqueIdentifier>{3d68d08a-7dea-4c65-8fef-a30b2d4f1051}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Enemy Files">
+      <UniqueIdentifier>{47488889-a780-4c0e-8583-32bf8794d6b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Item Files">
+      <UniqueIdentifier>{c6dc3aef-963b-42e4-9146-e9cac725099d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Map Files">
+      <UniqueIdentifier>{c77db3b3-b7f1-4c48-9067-a99fbf0edd86}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\turboEnigma3\Hero.h">
+      <Filter>Header Files\Entity Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\turboEnigma3\enemy.h">
+      <Filter>Header Files\Entity Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\turboEnigma3\Item.h">
+      <Filter>Header Files\Entity Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\turboEnigma3\slime.h">
+      <Filter>Header Files\Entity Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\turboEnigma3\map.h">
+      <Filter>Header Files\Map Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\turboEnigma3\mapSystem.h">
+      <Filter>Header Files\Map Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\turboEnigma3\sdl_enigma.h">
+      <Filter>Header Files\Platform Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\turboEnigma3\texture.h">
+      <Filter>Header Files\Platform Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\turboEnigma3\entity_table.h">
+      <Filter>Header Files\Utility Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\turboEnigma3\enigma_constants.h">
+      <Filter>Header Files\Utility Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\turboEnigma3\gameState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\turboEnigma3\camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\turboEnigma3\collision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\turboEnigma3\sdl_enigma.cpp">
+      <Filter>Source Files\Platform Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\turboEnigma3\texture.cpp">
+      <Filter>Source Files\Platform Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\turboEnigma3\camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\turboEnigma3\collision.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\turboEnigma3\entity_table.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\turboEnigma3\gameState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\turboEnigma3\Hero.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\turboEnigma3\enemy.cpp">
+      <Filter>Source Files\Enemy Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\turboEnigma3\slime.cpp">
+      <Filter>Source Files\Enemy Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\turboEnigma3\item.cpp">
+      <Filter>Source Files\Item Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\turboEnigma3\map.cpp">
+      <Filter>Source Files\Map Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\turboEnigma3\mapSystem.cpp">
+      <Filter>Source Files\Map Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

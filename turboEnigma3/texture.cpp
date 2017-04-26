@@ -1,5 +1,5 @@
-#include "texture.h"
 #include <SDL.h>
+#include "texture.h"
 
 
 texture::texture(SDL_Texture* ptr, int height, int width) 

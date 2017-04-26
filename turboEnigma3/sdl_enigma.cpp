@@ -8,7 +8,7 @@
 
 
 
-sdlPlatformData::sdlPlatformData() 
+sdlPlatformData::sdlPlatformData(gameData& gameState) : sceneCamera(gameState, textures)
 {
   error = false;
 
@@ -54,6 +54,9 @@ sdlPlatformData::sdlPlatformData()
       printf("Failed to load media SDL_Error: %s\n", SDL_GetError());
     }
   }
+
+
+  
 }
 
 sdlPlatformData::~sdlPlatformData()
@@ -87,6 +90,23 @@ bool sdlPlatformData::handleMessages()
         } else if (e.type == SDL_KEYDOWN)
         {
             // handle key inputs
+          switch (e.key.keysym.sym)
+          {
+          case SDLK_UP:
+            recentEvents.push_back(KEY_PRESS_SURFACE_UP);
+            break;
+          case SDLK_DOWN:
+            recentEvents.push_back(KEY_PRESS_SURFACE_DOWN);
+            break;
+          case SDLK_RIGHT:
+            recentEvents.push_back(KEY_PRESS_SURFACE_RIGHT);
+            break;
+          case SDLK_LEFT:
+            recentEvents.push_back(KEY_PRESS_SURFACE_LEFT);
+            break;
+          default:
+            break;
+          }
         }
     }
 
@@ -127,7 +147,7 @@ bool sdlPlatformData::loadMedia()
 
     if(succeeded)
     {
-        printf("All assets loaded successfully!");
+        printf("All assets loaded successfully!\n");
     }
     return succeeded;
 }
@@ -135,20 +155,25 @@ bool sdlPlatformData::loadMedia()
 
 
 
-void sdlPlatformData::render(gameData& state)
+void sdlPlatformData::render()
 {
     // this is just test code!
     // clean off screen
     SDL_SetRenderDrawColor( renderer, 0xFF, 0xFF, 0xFF, 0xFF );
-	SDL_RenderClear( renderer );
+	  SDL_RenderClear( renderer );
 
-    //printf("%s\n", SDL_GetError());
+
+
+    //printf("SDL Render Error: %s\n", SDL_GetError());
     // each texture render copy looks like this
     // 3rd arg is important, it is the rect for the location of the sprite
 
     // parse game state and render stuff here
 
-    textures[0]->render(50, 50, renderer);
+    sceneCamera.renderScene(renderer);
+
+    // TODO remove this test XD
+    // textures[0]->render(50, 50, renderer);
 
     // everything to render is above this line
     // actually renderering the scene is here
