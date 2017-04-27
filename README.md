@@ -1,5 +1,7 @@
 # turboEnigma3
 
+[![Join the chat at https://gitter.im/turbo-enigma3/Lobby](https://badges.gitter.im/turbo-enigma3/Lobby.svg)](https://gitter.im/turbo-enigma3/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 # Collaborators
 * Sam Bateman - cyberdr8gon
 * Kylee Bennett - kybe6708
