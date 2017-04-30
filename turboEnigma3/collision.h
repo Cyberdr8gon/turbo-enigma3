@@ -8,3 +8,5 @@
 // 1 is cant walk
 // 2 is toggle door
 int canWalk(Tile tileToCheck);
+
+int selectWallTile(Tile up, Tile down, Tile right, Tile left);

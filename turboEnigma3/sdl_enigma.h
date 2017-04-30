@@ -46,9 +46,9 @@ class sdlPlatformData
       // index 0
       "test1.bmp",
       //1
-      "tiles/unused.bmp",
+      "tiles/unused.png",
       //2
-      "tiles/floor.bmp",
+      "tiles/floor.png",
       //3
       "tiles/wall.bmp",
       //4
@@ -56,9 +56,43 @@ class sdlPlatformData
       //5
       "tiles/openDoor.bmp",
       //6
-      "tiles/upStairs.bmp",
+      "tiles/upStairs.png",
       //7
-      "tiles/downStairs.bmp"
+      "tiles/downStairs.png",
+      //8 - wall1
+      "tiles/walls/11.png",
+      //9 - wall2
+      "tiles/walls/12.png",
+      //10 - wall3
+      "tiles/walls/13.png",
+      //11 - wall4
+      "tiles/walls/14.png",
+      //12 - wall5
+      "tiles/walls/15.png",
+      //13 - wall6
+      "tiles/walls/16.png",
+      //14 - wall7
+      "tiles/walls/17 copy.png",
+      //15 - wall8
+      "tiles/walls/20.png",
+      //16 - wall9
+      "tiles/walls/21.png",
+      //17 - wall10
+      "tiles/walls/22.png",
+      //18 - wall11
+      "tiles/walls/23.png",
+      //19 - wall12
+      "tiles/walls/24.png",
+      //20 - wall13
+      "tiles/walls/25.png",
+      //21 - wall14
+      "tiles/walls/26.png",
+      //22 - wall15
+      "tiles/walls/27.png",
+      //23 - wall15
+      "entities/caveman.png",
+
+
     };
 
     bool error;

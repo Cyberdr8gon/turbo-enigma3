@@ -230,7 +230,7 @@ SDL_Texture* sdlPlatformData::loadTexture(std::string path, int* width, int* hei
     else
     {
         //Color key image
-        SDL_SetColorKey( loadedSurface, SDL_TRUE, SDL_MapRGB( loadedSurface->format, 0, 0xFF, 0xFF ) );
+        SDL_SetColorKey( loadedSurface, SDL_TRUE, SDL_MapRGB( loadedSurface->format, 0xFF, 0, 0xFF ) );
         //Create texture from surface pixels
         newTexture = SDL_CreateTextureFromSurface( renderer, loadedSurface );
         if( newTexture == NULL )
