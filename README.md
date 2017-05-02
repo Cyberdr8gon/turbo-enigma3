@@ -2,6 +2,16 @@
 
 [![Join the chat at https://gitter.im/turbo-enigma3/Lobby](https://badges.gitter.im/turbo-enigma3/Lobby.svg)](https://gitter.im/turbo-enigma3/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+## HOW TO USE
+At this point, our pre-release versions only support Windows 10 64-bit. 
+
+
+Running the project is simple, just unzip the release and double click turboenigma3.bat
+
+
+Get the latest release here:
+https://github.com/Cyberdr8gon/turbo-enigma3/releases
+
 # Collaborators
 * Sam Bateman - cyberdr8gon
 * Kylee Bennett - kybe6708
@@ -12,13 +22,13 @@
 TurboEnigma3
 
 # Description
-Create a simple 2d dungeon crawler in C++
+Create a simple, highly moddable 2d dungeon crawler in C++
 # Vision Statement
-Create a fun and easy to play dungeon crawler
+Create a fun and easy to play dungeon crawler that anyone can change
 # Motivation
 An opportunity to utilize programming skills to make a fun and easy dungeon crawler, introduce 
 group members to translating concepts to a visual output on the screen is a challenging and rewarding
-project. 
+project. An easy modding experience allows us to share this with our plays
 # Risks
 Unfamiliarity with google test (or other testing environments)
 Inexperience with building graphical user interface and graphics implementations
@@ -41,7 +51,7 @@ Frequent communication with teammates with Agile format
 
 
 # Methodology 
-Agile
+Waterfall with Cards
 
 # Project tracking software
 Github projects
